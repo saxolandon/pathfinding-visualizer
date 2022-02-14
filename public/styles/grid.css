@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #02182B;
+  height: 3em;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  padding: .5em 2em;
+  margin-right: 1em;
+  margin-left: 1em;
+  background-color: #0788c4; 
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+#grid-container {
+  margin: 1.5em auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.grid-cell {
+  border: 1px solid lightblue;
+  width: 25px;
+  height: 25px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wall {
+  background-color: #02182B;
+  border: none;
+  animation-name: wall;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+}
+
+.start {
+  background-color: green;
+  border: none;
+}
+
+.end {
+  background-color: red;
+  border: none;
+}
+
+.visited {
+  background-color: #2ba5dd;
+  animation-name: visited;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+.path {
+  background-color: yellow;
+}
+
+@keyframes wall {
+  0% {
+    transform: scale(.2);
+    background-color: #02182B;
+  }
+
+  25% {
+    transform: scale(.4);
+    background-color: #02182B;
+  }
+
+  50% {
+    transform: scale(.6);
+    background-color: #02182B;
+  }
+
+  75% {
+    transform: scale(0.8);
+    background-color: #02182B;
+  }
+
+  100% {
+    transform: scale(1.0);
+    background-color: #02182B;
+  }
+}
+
+@keyframes visited {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: #1C77C3;
+  }
+
+  75% {
+    transform: scale(1.2);
+    background-color: #40BCD8;
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: #2ba5dd;
+  }
+}
