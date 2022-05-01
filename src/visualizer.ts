@@ -4,8 +4,6 @@ import BFS from './pathfindingAlgos/bfs.js'
 const width = Math.trunc(window.innerWidth / 26)
 const height = Math.trunc(window.innerHeight / 27) 
 
-console.log(width, height)
-
 let grid: Grid = new Grid(width, height)
 grid.drawGrid()
 let bfs: BFS = new BFS(grid.getCells(), grid.getWidth(), grid.getHeight(), grid.getStartCellIndex(), grid.getEndCellIndex())
