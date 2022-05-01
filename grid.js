@@ -65,8 +65,10 @@ export default class Grid {
                 if (row !== undefined && col !== undefined) {
                     let numRow = parseInt(row, 10);
                     let numCol = parseInt(col, 10);
-                    this.cells[numRow][numCol].addClassToCell('wall');
-                    this.cells[numRow][numCol].setIsAWall(true);
+                    if (!this.isStartOrEndCell(this.cells[numRow][numCol])) {
+                        this.cells[numRow][numCol].addClassToCell('wall');
+                        this.cells[numRow][numCol].setIsAWall(true);
+                    }
                 }
             }
         }
